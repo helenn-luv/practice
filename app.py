@@ -149,6 +149,7 @@ system_prompt = build_system_prompt(kb)
 # ─── 사이드바 ────────────────────────────────────────────────────
 with st.sidebar:
     st.markdown("### 💳 결제 도우미")
+    st.page_link("pages/1_관리자.py", label="관리자 페이지", icon="🔐")
     last_upd = kb.get("last_updated", "")
     if last_upd:
         st.markdown(f'<span class="status-badge">● 온라인</span><span class="update-badge">📝 {last_upd[:10]} 업데이트</span>', unsafe_allow_html=True)
@@ -250,3 +251,4 @@ if (send or pending) and user_input.strip():
         except Exception as e:
             st.error(f"오류가 발생했습니다: {str(e)}")
     st.rerun()
+    
