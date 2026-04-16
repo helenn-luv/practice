@@ -149,8 +149,10 @@ system_prompt = build_system_prompt(kb)
 # ─── 사이드바 ────────────────────────────────────────────────────
 with st.sidebar:
     st.markdown("### 💳 결제 도우미")
-if st.button("🔐 관리자 페이지"):
-    st.switch_page("pages/1_admin.py")
+
+    if st.button("🔐 관리자 페이지"):
+        st.switch_page("1_admin.py")
+        
     last_upd = kb.get("last_updated", "")
     if last_upd:
         st.markdown(f'<span class="status-badge">● 온라인</span><span class="update-badge">📝 {last_upd[:10]} 업데이트</span>', unsafe_allow_html=True)
