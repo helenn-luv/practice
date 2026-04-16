@@ -151,7 +151,7 @@ with st.sidebar:
     st.markdown("### 💳 결제 도우미")
 
     if st.button("🔐 관리자 페이지"):
-        st.switch_page("1_admin.py")
+        st.switch_page("pages/1_admin.py")
         
     last_upd = kb.get("last_updated", "")
     if last_upd:
