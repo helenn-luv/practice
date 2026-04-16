@@ -149,7 +149,7 @@ system_prompt = build_system_prompt(kb)
 # ─── 사이드바 ────────────────────────────────────────────────────
 with st.sidebar:
     st.markdown("### 💳 결제 도우미")
-    if st.button("🔐 관리자 페이지"):
+if st.button("🔐 관리자 페이지"):
     st.switch_page("pages/1_관리자.py")
     last_upd = kb.get("last_updated", "")
     if last_upd:
